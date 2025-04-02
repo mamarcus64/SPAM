@@ -22,14 +22,17 @@ class Spam(pl.LightningModule):
     """
 
     # TODO: have better argument parser
-    def __init__(self, config_file: str, original_checkpoint: str, spam_checkpoint
-                #  save_folder: str
+    def __init__(self,
+                 config_file: str,
+                 original_checkpoint: str,
+                 spam_checkpoint,
+                 device
                  ):
         """
         Initializes the Spam model.
         """
         super().__init__()
-        self.cuda_device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        self.cuda_device = device
         self.loss_logs = []
         self.loss_logs_history = []
         self.checkpoint_file = spam_checkpoint
