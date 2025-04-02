@@ -17,6 +17,7 @@ cd ..
 
 # run SPAM!
 python src/run_spam.py assets/test_image.png --output-type image --output-folder assets
+python src/run_spam.py assets/test_video.mp4 --output-type image --output-folder assets
 ```
 Example output for an image:
 <p float="left">
